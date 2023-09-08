@@ -3,41 +3,44 @@ body {
   font-size: 0.9em;
   line-height: 1.5;
   letter-spacing: 0.5px;
-}
-  @import url('https://c0.wallpaperflare.com/preview/84/694/443/codes-coding-css-css3.jpg');
-
-  body  {
-      background-image: url('https://c0.wallpaperflare.com/preview/84/694/443/codes-coding-css-css3.jpg');
-    background-size:100%;
-          -webkit-animation: slidein 60s;
-          animation: slidein 60s;
-  
-          -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  
-          -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  
-          -webkit-animation-direction: alternate;
-          animation-direction: alternate;              
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 300% 300%;
+    background-image: linear-gradient(-45deg, rgb(73, 255, 103) 0%, rgb(58, 197, 81), rgb(204, 255, 0), rgb(242, 255, 0));
+    -webkit-animation: AnimateBG 20s ease infinite;
+            animation: AnimateBG 20s ease infinite;
   }
   
-  @-webkit-keyframes slidein {
-  from {background-position: top; background-size:1600px; }
-  to {background-position: -100px 0px;background-size:1600px;}
+  @-webkit-keyframes AnimateBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
   
-  @keyframes slidein {
-  from {background-position: top;background-size:1600px; }
-  to {background-position: -100px 0px;background-size:1600px;}
-  
+  @keyframes AnimateBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
-
 
 
 /* visitekaartje stijl */
 article {
-  border-radius: 15px;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.5s;
@@ -153,7 +156,6 @@ img {
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.7s;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
 }
 
 /* voorkant*/
@@ -231,6 +233,6 @@ img {
 
 #watchVideoLink:hover {
   background-color: #ffffff; 
-  color: #ffffff; 
+  color: #000000; 
 }
 
